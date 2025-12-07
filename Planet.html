@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h{
+            height: 200px;
+            width: 1850px;
+            border-style: double;
+            border-color: chartreuse;
+            margin-top: 35px;
+            text-align: center;
+            font-weight: bolder;
+            color: chartreuse;
+        }
+        .b{
+            background-color: darkblue;
+            color: white;
+        }
+        .main{
+            height: 1000px;
+            width: 1850px;
+             border-style: double;
+            border-color: chartreuse;
+            margin-top: 200px;
+        }
+        .planet{
+            height: 300px;
+            width: 450px;
+            
+            display: inline-block;
+            margin-left: 150px;
+            margin-top: 20px;
+        }
+        .image{
+            position: relative;
+            left: 80px;
+            top: 20px;
+            border-radius: 50%;
+            height: 180px;
+        }
+        .n{
+            position: relative;
+            top: 50px;
+            right: 60px;
+            color: black;
+            font-weight: bolder;
+            font-size: larger;
+            color: chartreuse;
+        }
+        .bd{
+            background-image: url(https://premiumcoding.com/wp-content/uploads/2014/02/space-background1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        label{
+            font-size: 30px;
+        }
+        button{
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body class="bd">
+    <div class="h">
+     <h1>To Know about your weight in other planets please</h1>
+     <label for="">enter your weight:</label><br>
+     <input type="number" name="" id="weight" ><br><br>
+     <button class="b" onclick="weight()">submit</button>
+    </div>
+     <div class="main">
+       <div class="planet">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSda7F3-YCs2-Lsizo9DhwDJ_qKlmglkjrhjg&s" alt="" class="image">
+        <span class="n" id="mercury">mercury :</span>
+       </div>
+       <div class="planet">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR00r50Up_gSoRt4mxg9CDW3EK7Jz0kDbPjEg&s" alt="" class="image">
+        <span class="n" id="venus">venus :</span>
+       </div>
+       <div class="planet">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_dzUt-f8ROOVwg3Qb7-iyQVrLrCoI5NQxBw&s" alt="" class="image">
+        <span class="n" id="mars">mars :</span>
+       </div><br>
+       <div class="planet">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRm2j0n9yApWWlAj-4idq3AxqrQ5xrsgWucQ&s" alt="" class="image">
+        <span class="n" id="jupiter">jupiter :</span>
+       </div>
+       <div class="planet">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-fV3GzaHaUF72_k2jkJBJ5bzSo00f8gNCQ&s" alt="" class="image">
+        <span class="n" id="saturn">saturn :</span>
+       </div>
+       <div class="planet">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkJKzzsU7H7s_FWho_BgeW-7BCCtyV5d9LNw&s" alt="" class="image">
+        <span class="n" id="uranus">uranus :</span>
+       </div><br>
+       <div class="planet">
+           <img src="https://icon2.cleanpng.com/20180501/xhe/avs157nwq.webp" alt="" class="image">
+        <span class="n" id="neptune">neptune :</span>
+       </div>
+       <div class="planet">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsemU5l5B3p7NERKqm9gem-ARTpfjXQa_ITQ&s" alt="" class="image">
+        <span class="n" id="pluto">pluto :</span>
+       </div>
+       <div class="planet">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMFjL5SYozCWvBRjMpb8iYie7ddIMjhHBmww&s" alt="" class="image">
+        <span class="n" id="moon">moon :</span>
+       </div>
+
+     </div>
+     <script>
+        function weight(){
+            var weight = document.getElementById("weight").value;
+            var mercury = weight * 0.38;
+            var venus = weight * 0.91;
+            var mars = weight * 0.38;
+            var jupiter = weight * 2.34;
+            var saturn = weight * 1.06;
+            var uranus = weight * 0.92;
+            var neptune = weight * 1.19;
+            var pluto = weight * 0.06;
+            var moon = weight * 0.17;
+             if(weight<0)
+        {
+            alert("weight shouldnot be negative");
+        }
+       
+         else{
+
+            document.getElementById("mercury").innerHTML = "mercury : " + mercury + "kg";
+            document.getElementById("venus").innerHTML = "venus : " + venus + "kg";
+            document.getElementById("mars").innerHTML = "mars : " + mars + "kg";
+            document.getElementById("jupiter").innerHTML = "jupiter : " + jupiter + "kg";
+            document.getElementById("saturn").innerHTML = "saturn : " + saturn + "kg";
+            document.getElementById("uranus").innerHTML = "uranus : " + uranus + "kg";
+            document.getElementById("neptune").innerHTML = "neptune : " + neptune + "kg";
+            document.getElementById("pluto").innerHTML = "pluto : " + pluto + "kg";
+            document.getElementById("moon").innerHTML = "moon : " + moon + "kg";
+           
+        }
+          if(weight<0){
+           document.getElementById("mercury").innerHTML = "mercury : kg";
+           document.getElementById("venus").innerHTML = "venus : kg";
+           document.getElementById("mars").innerHTML = "mars : kg";
+           document.getElementById("jupiter").innerHTML = "jupiter : kg";
+           document.getElementById("saturn").innerHTML = "saturn : kg";
+           document.getElementById("uranus").innerHTML = "uranus : kg";
+           document.getElementById("neptune").innerHTML = "neptune : kg";
+           document.getElementById("pluto").innerHTML = "pluto : kg";
+           document.getElementById("moon").innerHTML = "moon : kg";
+          
+        } if(weight===""){
+            alert("please enter a number");
+        }
+    }
+     </script>
+</body>
+</html>
